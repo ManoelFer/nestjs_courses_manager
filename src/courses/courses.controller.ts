@@ -28,7 +28,7 @@ export class CoursesController {
   }
 
   @Post() //TODO: route to add, example: http://localhost:3000/courses
-  @ApiCreatedResponse({ description: 'List course by id' })
+  @ApiCreatedResponse({ description: 'To create course' })
   async addCourse(@Body() createCourseDto: CreateCourseDto) {
     const course = await this.coursesService.addCourse(createCourseDto);
     return course;
